@@ -23,6 +23,8 @@ public class carta implements Serializable {
     private String nombre;
     @Column(name="precio")
     private float precio;
+    @Column (name="estado")
+    private String estado;
 
     public carta() {
     }
@@ -57,9 +59,19 @@ public class carta implements Serializable {
         this.precio = precio;
     }
 
-    @Override
-    public String toString() {
-        return "carta{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + '}';
+    public String getEstado() {
+        return estado;
     }
 
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "carta{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", estado=" + estado + '}';
+    }
+
+    
+    
 }

@@ -18,13 +18,13 @@ public class Main {
         int opciones = 0;
         //Menú selector
         do {
-            System.out.println("Elige una opción: \n"
-                    + "La carta: 1\n"
-                    + "Crear tu pedido: 2\n"
-                    + "Marca tu pedido como recogido: 3\n"
-                    + "Eliminar tu pedido: 4\n"
-                    + "Todas las comandas pendientes: 5\n"
-                    + "Salir: 6\n");
+            System.out.println("\n\nElige una opción:\n\n"
+                    + "[1] La carta:\n"
+                    + "[2] Crear tu pedido\n"
+                    + "[3] Marca tu pedido como recogido\n"
+                    + "[4] Eliminar tu pedido\n"
+                    + "[5] Todas las comandas pendientes\n"
+                    + "[6] Salir\n");
             opciones = sc.nextInt();
             switch (opciones) {
                 case 1:

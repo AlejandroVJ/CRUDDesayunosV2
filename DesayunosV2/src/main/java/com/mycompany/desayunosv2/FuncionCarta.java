@@ -18,11 +18,8 @@ public class FuncionCarta {
     public void listaCarta(){
         Query q = s.createQuery("FROM carta", carta.class);
         ArrayList<carta> res = (ArrayList<carta>)q.getResultList();
-        System.out.println(res.toString());
-    
-    
-    
-    
+        System.out.println("\n\nCONTENIDO DE LA CARTA:");
+        res.forEach( (p)->System.out.println(p) );
     }
     
     

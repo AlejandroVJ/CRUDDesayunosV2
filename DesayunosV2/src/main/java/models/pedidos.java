@@ -1,7 +1,7 @@
 package models;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,40 +14,26 @@ import javax.persistence.Table;
  * @author AlejandroVicenteJarn
  */
 @Entity
-@Table(name="pedidos")
+@Table(name="pedidios")
 public class pedidos implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
     @Column(name="cliente")
     private String cliente;
+    @Column(name="curso")
+    private String curso;
     @Column(name="fecha")
     private Date fecha;
     @Column(name="estado")
     private String estado;
     @Column (name="carta_id")
-    int cartaId;
+    private Integer cartaId;
     
 
     public pedidos() {
         
     }
-
-    public pedidos(Integer id, String cliente, Date fecha, String estado, int cartaId) {
-        this.id = id;
-        this.cliente = cliente;
-        this.fecha = fecha;
-        this.estado = estado;
-        this.cartaId = cartaId;
-    }
-
-    public pedidos(int i, String nombre, String estado, int cartaId, Date fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-
-    
 
     public Integer getId() {
         return id;
@@ -65,20 +51,20 @@ public class pedidos implements Serializable {
         this.cliente = cliente;
     }
 
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
     public Date getFecha() {
         return fecha;
     }
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-
-    public int getCartaId() {
-        return cartaId;
-    }
-
-    public void setCartaId(int cartaId) {
-        this.cartaId = cartaId;
     }
 
     public String getEstado() {
@@ -89,8 +75,21 @@ public class pedidos implements Serializable {
         this.estado = estado;
     }
 
+    public Integer getCartaId() {
+        return cartaId;
+    }
+
+    public void setCartaId(Integer cartaId) {
+        this.cartaId = cartaId;
+    }
+
     @Override
     public String toString() {
-        return "pedidios{" + "id=" + id + ", cliente=" + cliente + ", fecha=" + fecha + ", estado=" + estado + ", cartaId=" + cartaId + '}';
+        return "pedidos{" + "id=" + id + ", cliente=" + cliente + ", curso=" + curso + ", fecha=" + fecha + ", estado=" + estado + ", cartaId=" + cartaId + '}';
     }
+
+    
+    
+
+  
 }
